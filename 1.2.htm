@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Concepts Example</title>
+  <script>
+    // String methods
+    let text = "Hello, World!";
+    console.log(text.length);            // String length
+    console.log(text.toUpperCase());     // Convert to uppercase
+    console.log(text.indexOf("World"));  // Find index of a substring
+    console.log(text.substring(0, 5));   // Extract substring
+    console.log(text.split(","));        // Split into an array
+    
+    // Number methods
+    let number = 123.456;
+    console.log(number.toFixed(2));      // Format decimal places
+    console.log(number.toExponential(2));// Exponential notation
+    console.log(Number.isNaN(number));   // Check for NaN
+    console.log(Math.floor(number));      // Round down
+    console.log(Math.random());           // Generate random number
+    
+    // Array methods
+    let arr = [1, 2, 3, "four", 5];
+    console.log(arr.length);              // Array length
+    console.log(arr.includes("four"));    // Check if value exists
+    console.log(arr.push(6));             // Add element to end
+    console.log(arr.pop());               // Remove element from end
+    console.log(arr.join("-"));           // Join array elements
+    
+    // Date methods
+    let currentDate = new Date();
+    console.log(currentDate.toDateString());// Convert to readable date
+    console.log(currentDate.getMonth());   // Get month (0-11)
+    console.log(currentDate.getFullYear());// Get year
+    console.log(currentDate.getHours());   // Get hours
+    console.log(currentDate.getMinutes());// Get minutes
+    
+    // Function methods
+    function greet(name) {
+      return "Hello, " + name + "!";
+    }
+    let greeting = greet("Alice");
+    console.log(greeting);
+    
+    let multiply = function(x, y) {
+      return x * y;
+    }
+    console.log(multiply(5, 3));
+  </script>
+</head>
+<body>
+  <h1>JavaScript Concepts Example</h1>
+  <p>Open the console to see the results of JavaScript methods.</p>
+</body>
+</html>
+
