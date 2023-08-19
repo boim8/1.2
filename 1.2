@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Concepts</title>
+</head>
+<body>
+  <script>
+    // String methods
+    const str = "Hello, World!";
+    console.log("String Length:", str.length);
+    console.log("Uppercase:", str.toUpperCase());
+    console.log("Substring:", str.substring(0, 5));
+    console.log("Index of 'World':", str.indexOf("World"));
+    console.log("Replace 'Hello' with 'Hi':", str.replace("Hello", "Hi"));
+
+    // Number methods
+    const num = 42.6789;
+    console.log("Fixed to 2 decimal places:", num.toFixed(2));
+    console.log("Exponential notation:", num.toExponential());
+    console.log("Rounded down:", Math.floor(num));
+    console.log("Absolute value:", Math.abs(num));
+    console.log("Random number between 0 and 1:", Math.random());
+
+    // Array methods
+    const arr = [1, 2, 3, 4, 5];
+    console.log("Array length:", arr.length);
+    console.log("Join as string:", arr.join(" - "));
+    console.log("Add element at the end:", arr.push(6));
+    console.log("Remove and return last element:", arr.pop());
+    console.log("Find index of value 3:", arr.indexOf(3));
+
+    // Date methods
+    const currentDate = new Date();
+    console.log("Current date:", currentDate);
+    console.log("Year:", currentDate.getFullYear());
+    console.log("Month:", currentDate.getMonth());
+    console.log("Day:", currentDate.getDay());
+    console.log("Hours:", currentDate.getHours());
+
+    // Function methods
+    function greet(name) {
+      console.log("Hello, " + name + "!");
+    }
+    function multiply(a, b) {
+      return a * b;
+    }
+    greet("Alice");
+    console.log("Product:", multiply(5, 3));
+  </script>
+</body>
+</html>
