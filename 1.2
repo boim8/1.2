@@ -1,51 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JavaScript Concepts</title>
-</head>
-<body>
+  <title>JavaScript Concepts Example</title>
   <script>
-    // String methods
-    const str = "Hello, World!";
-    console.log("String Length:", str.length);
-    console.log("Uppercase:", str.toUpperCase());
-    console.log("Substring:", str.substring(0, 5));
-    console.log("Index of 'World':", str.indexOf("World"));
-    console.log("Replace 'Hello' with 'Hi':", str.replace("Hello", "Hi"));
-
-    // Number methods
-    const num = 42.6789;
-    console.log("Fixed to 2 decimal places:", num.toFixed(2));
-    console.log("Exponential notation:", num.toExponential());
-    console.log("Rounded down:", Math.floor(num));
-    console.log("Absolute value:", Math.abs(num));
-    console.log("Random number between 0 and 1:", Math.random());
-
-    // Array methods
-    const arr = [1, 2, 3, 4, 5];
-    console.log("Array length:", arr.length);
-    console.log("Join as string:", arr.join(" - "));
-    console.log("Add element at the end:", arr.push(6));
-    console.log("Remove and return last element:", arr.pop());
-    console.log("Find index of value 3:", arr.indexOf(3));
-
-    // Date methods
-    const currentDate = new Date();
-    console.log("Current date:", currentDate);
-    console.log("Year:", currentDate.getFullYear());
-    console.log("Month:", currentDate.getMonth());
-    console.log("Day:", currentDate.getDay());
-    console.log("Hours:", currentDate.getHours());
-
-    // Function methods
-    function greet(name) {
-      console.log("Hello, " + name + "!");
+    function showResults() {
+      // String methods
+      let text = "Hello, World!";
+      document.getElementById("stringLength").textContent = "String length: " + text.length;
+      document.getElementById("toUpperCase").textContent = "Uppercase: " + text.toUpperCase();
+      document.getElementById("indexOf").textContent = "Index of 'World': " + text.indexOf("World");
+      document.getElementById("substring").textContent = "Substring (0, 5): " + text.substring(0, 5);
+      document.getElementById("split").textContent = "Split into array: " + text.split(",").join(", ");
+      
+      // Number methods
+      let number = 123.456;
+      document.getElementById("toFixed").textContent = "Fixed to 2 decimal places: " + number.toFixed(2);
+      document.getElementById("toExponential").textContent = "Exponential notation: " + number.toExponential(2);
+      document.getElementById("isNaN").textContent = "Is NaN: " + Number.isNaN(number);
+      document.getElementById("floor").textContent = "Floor: " + Math.floor(number);
+      document.getElementById("random").textContent = "Random number: " + Math.random();
+      
+      // Array methods
+      let arr = [1, 2, 3, "four", 5];
+      document.getElementById("arrayLength").textContent = "Array length: " + arr.length;
+      document.getElementById("includes").textContent = "Includes 'four': " + arr.includes("four");
+      arr.push(6);
+      document.getElementById("push").textContent = "After push(6): " + arr.join(", ");
+      arr.pop();
+      document.getElementById("pop").textContent = "After pop(): " + arr.join(", ");
+      document.getElementById("join").textContent = "Joined array: " + arr.join("-");
+      
+      // Date methods
+      let currentDate = new Date();
+      document.getElementById("toDateString").textContent = "Readable date: " + currentDate.toDateString();
+      document.getElementById("getMonth").textContent = "Month (0-11): " + currentDate.getMonth();
+      document.getElementById("getFullYear").textContent = "Year: " + currentDate.getFullYear();
+      document.getElementById("getHours").textContent = "Hours: " + currentDate.getHours();
+      document.getElementById("getMinutes").textContent = "Minutes: " + currentDate.getMinutes();
+      
+      // Function methods
+      function greet(name) {
+        return "Hello, " + name + "!";
+      }
+      let greeting = greet("Alice");
+      document.getElementById("greeting").textContent = greeting;
+      
+      let multiply = function(x, y) {
+        return x * y;
+      }
+      document.getElementById("multiply").textContent = "Multiply 5 and 3: " + multiply(5, 3);
     }
-    function multiply(a, b) {
-      return a * b;
-    }
-    greet("Alice");
-    console.log("Product:", multiply(5, 3));
   </script>
+</head>
+<body onload="showResults()">
+  <h1>JavaScript Concepts Example</h1>
+  <p>Check the following sections to see the results of JavaScript methods:</p>
+  <section>
+    <h2>String Methods</h2>
+    <p id="stringLength"></p>
+    <p id="toUpperCase"></p>
+    <p id="indexOf"></p>
+    <p id="substring"></p>
+    <p id="split"></p>
+  </section>
+  <section>
+    <h2>Number Methods</h2>
+    <p id="toFixed"></p>
+    <p id="toExponential"></p>
+    <p id="isNaN"></p>
+    <p id="floor"></p>
+    <p id="random"></p>
+  </section>
+  <section>
+    <h2>Array Methods</h2>
+    <p id="arrayLength"></p>
+    <p id="includes"></p>
+    <p id="push"></p>
+    <p id="pop"></p>
+    <p id="join"></p>
+  </section>
+  <section>
+    <h2>Date Methods</h2>
+    <p id="toDateString"></p>
+    <p id="getMonth"></p>
+    <p id="getFullYear"></p>
+    <p id="getHours"></p>
+    <p id="getMinutes"></p>
+  </section>
+  <section>
+    <h2>Function Methods</h2>
+    <p id="greeting"></p>
+    <p id="multiply"></p>
+  </section>
 </body>
 </html>
