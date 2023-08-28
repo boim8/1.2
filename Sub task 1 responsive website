@@ -27,7 +27,7 @@
 <body>
     <div class="container">
         <h1>Responsive Web Design</h1>
-        <img src="sample-image.jpg" alt="Sample Image">
+        <img src="https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2FtcGxlfGVufDB8fDB8fHww&w=1000&q=80" alt="Sample Image">
         <p>This is a sample webpage showcasing responsive design.</p>
     </div>
 </body>
